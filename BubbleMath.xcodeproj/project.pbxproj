@@ -133,6 +133,10 @@
 		EEEDD1E0173E9C09000F8B2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1DF173E9C09000F8B2A /* AppDelegate.m */; };
 		EEEDD1E3173E9C09000F8B2A /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1E2173E9C09000F8B2A /* HelloWorldLayer.m */; };
 		EEEDD1E6173E9C09000F8B2A /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1E5173E9C09000F8B2A /* IntroLayer.m */; };
+		EEEDD1EF173E9DEE000F8B2A /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1EE173E9DEE000F8B2A /* Challenge.m */; };
+		EEEDD1F2173E9EAC000F8B2A /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1F1173E9EAB000F8B2A /* Bubble.m */; };
+		EEEDD1F5173E9F9E000F8B2A /* Wobble.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1F4173E9F9E000F8B2A /* Wobble.m */; };
+		EEEDD1F7173E9FC2000F8B2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEDD1F6173E9FC2000F8B2A /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +402,13 @@
 		EEEDD1E2173E9C09000F8B2A /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		EEEDD1E4173E9C09000F8B2A /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		EEEDD1E5173E9C09000F8B2A /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		EEEDD1ED173E9DEE000F8B2A /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
+		EEEDD1EE173E9DEE000F8B2A /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
+		EEEDD1F0173E9EAB000F8B2A /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bubble.h; sourceTree = "<group>"; };
+		EEEDD1F1173E9EAB000F8B2A /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bubble.m; sourceTree = "<group>"; };
+		EEEDD1F3173E9F9E000F8B2A /* Wobble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wobble.h; sourceTree = "<group>"; };
+		EEEDD1F4173E9F9E000F8B2A /* Wobble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wobble.m; sourceTree = "<group>"; };
+		EEEDD1F6173E9FC2000F8B2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -462,6 +473,7 @@
 				EEEDD1E2173E9C09000F8B2A /* HelloWorldLayer.m */,
 				EEEDD1E4173E9C09000F8B2A /* IntroLayer.h */,
 				EEEDD1E5173E9C09000F8B2A /* IntroLayer.m */,
+				EEEDD1EC173E9D96000F8B2A /* Model */,
 				EEEDD067173E9C06000F8B2A /* Resources */,
 				EEEDD081173E9C06000F8B2A /* libs */,
 				EEEDD1DA173E9C09000F8B2A /* Supporting Files */,
@@ -473,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				EEEDD068173E9C06000F8B2A /* Default.png */,
+				EEEDD1F6173E9FC2000F8B2A /* Default-568h@2x.png */,
 				EEEDD06A173E9C06000F8B2A /* Default-Landscape~ipad.png */,
 				EEEDD06C173E9C06000F8B2A /* fps_images.png */,
 				EEEDD06E173E9C06000F8B2A /* fps_images-hd.png */,
@@ -832,6 +845,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EEEDD1EC173E9D96000F8B2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEEDD1ED173E9DEE000F8B2A /* Challenge.h */,
+				EEEDD1EE173E9DEE000F8B2A /* Challenge.m */,
+				EEEDD1F0173E9EAB000F8B2A /* Bubble.h */,
+				EEEDD1F1173E9EAB000F8B2A /* Bubble.m */,
+				EEEDD1F3173E9F9E000F8B2A /* Wobble.h */,
+				EEEDD1F4173E9F9E000F8B2A /* Wobble.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -895,6 +921,7 @@
 				EEEDD07D173E9C06000F8B2A /* Icon@2x.png in Resources */,
 				EEEDD080173E9C06000F8B2A /* iTunesArtwork in Resources */,
 				EEEDD1BE173E9C09000F8B2A /* ChangeLog in Resources */,
+				EEEDD1F7173E9FC2000F8B2A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1036,9 @@
 				EEEDD1E0173E9C09000F8B2A /* AppDelegate.m in Sources */,
 				EEEDD1E3173E9C09000F8B2A /* HelloWorldLayer.m in Sources */,
 				EEEDD1E6173E9C09000F8B2A /* IntroLayer.m in Sources */,
+				EEEDD1EF173E9DEE000F8B2A /* Challenge.m in Sources */,
+				EEEDD1F2173E9EAC000F8B2A /* Bubble.m in Sources */,
+				EEEDD1F5173E9F9E000F8B2A /* Wobble.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

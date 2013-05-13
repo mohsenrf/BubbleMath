@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 
 #import "Challenge.h"
+#import "Bubble.h"
 
 #pragma mark - HelloWorldLayer
 
@@ -46,16 +47,13 @@
 		// ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
         
+        Bubble *bubble=[[Bubble alloc] initWithBubble];
+        //bubble = [bubble makeBubble];
+        //CCSprite *bubble=[bubbleManager makeBubble];
         
-        CCSprite *bubble=[CCSprite spriteWithFile:@"bubble.png"];
-        //[bubble setTextureRect:CGRectMake(10,10,100,100)];
+        [[bubble bubbleSprite] setPosition:ccp( size.width /2 , size.height/2 )];
         
-        //[bubble setContentSize:CGSizeMake(5.0f, 5.0f)];
-        [bubble setScaleX:0.2f];
-        [bubble setScaleY:0.2f];
-        bubble.position = ccp( size.width /2 , size.height/2 );
-        
-        [self addChild:bubble];
+        [self addChild:[bubble bubbleSprite]];
         
         Challenge *gameChallenger = [[Challenge alloc] init];
         NSString *myString = [gameChallenger getChallengeWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];

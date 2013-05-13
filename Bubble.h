@@ -9,8 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface Bubble : CCLayer {
-    
-}
+@interface Bubble : CCSprite
+
+
+@property (nonatomic, retain) CCSprite *bubbleSprite;
+
+
+
+- (id)initWithBubble;
+-(CCSprite *) makeBubble;
+
 
 @end

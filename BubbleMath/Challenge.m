@@ -32,12 +32,18 @@
             break;
             
         case Subtraction:
+            _question=([NSString stringWithFormat:@"%@ - %@", [NSString stringWithFormat:@"%i", _firstOperand], [NSString stringWithFormat:@"%i", _secondOperand]]);
+            _answer = [NSString stringWithFormat:@"%i", (_firstOperand - _secondOperand)];
             break;
             
         case Multiplication:
+            _question=([NSString stringWithFormat:@"%@ * %@", [NSString stringWithFormat:@"%i", _firstOperand], [NSString stringWithFormat:@"%i", _secondOperand]]);
+            _answer = [NSString stringWithFormat:@"%i", (_firstOperand * _secondOperand)];
             break;
             
         case Division:
+            _question=([NSString stringWithFormat:@"%@ / %@", [NSString stringWithFormat:@"%i", _firstOperand], [NSString stringWithFormat:@"%i", _secondOperand]]);
+            _answer = [NSString stringWithFormat:@"%i", (_firstOperand / _secondOperand)];
             break;
             
         default:

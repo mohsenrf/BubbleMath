@@ -18,6 +18,8 @@
 
 - (id)initWithBubble;
 -(CCSprite *) makeBubble;
+- (void) moveAround;
+
 
 
 @end

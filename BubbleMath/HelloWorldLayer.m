@@ -48,12 +48,12 @@
 		CGSize size = [[CCDirector sharedDirector] winSize];
         
         Bubble *bubble=[[Bubble alloc] initWithBubble];
-        //bubble = [bubble makeBubble];
-        //CCSprite *bubble=[bubbleManager makeBubble];
         
-        [[bubble bubbleSprite] setPosition:ccp( size.width /2 , size.height/2 )];
+        
         
         [self addChild:[bubble bubbleSprite]];
+        
+        [bubble moveAround];
         
         Challenge *gameChallenger = [[Challenge alloc] init];
         NSString *myString = [gameChallenger getChallengeWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];

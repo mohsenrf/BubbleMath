@@ -18,7 +18,6 @@
     self = [super init];
     if (self) {
         
-        CGPoint defaultPoint=CGPointMake(150,130);
         _bubbleSprite=[CCSprite spriteWithFile:@"bubble.png"];
         [_bubbleSprite setScaleX:0.2f];
         [_bubbleSprite setScaleY:0.2f];

@@ -54,7 +54,7 @@
         [self addChild:[bubble bubbleSprite]];
         
         //[bubble liftBubble];
-        [bubble wobble];
+        //[bubble wobble];
         
         Challenge *gameChallenger = [[Challenge alloc] init];
         NSString *myString = [gameChallenger getChallengeWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];

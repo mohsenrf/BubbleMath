@@ -18,10 +18,11 @@
     self = [super init];
     if (self) {
         
+        CGPoint defaultPoint=CGPointMake(150,130);
         _bubbleSprite=[CCSprite spriteWithFile:@"bubble.png"];
         [_bubbleSprite setScaleX:0.2f];
         [_bubbleSprite setScaleY:0.2f];
-        [_bubbleSprite setPosition:ccp( 150 , 130 )];
+        [_bubbleSprite setPosition:ccp( defaultPoint.x , defaultPoint.y )];
         
         
         //Make a CCLabelTFF
@@ -31,6 +32,8 @@
         CGSize bubbleSpriteSize = _bubbleSprite.contentSize;
         [possibleAnswer setPosition:ccp(bubbleSpriteSize.width / 2, bubbleSpriteSize.height / 2)];
         
+        //wobble the bubble
+        [self wobble];
         //add it to the sprite
         [_bubbleSprite addChild: possibleAnswer];
     }
@@ -70,7 +73,8 @@
     
     //Defining action to animate property change.
     id action = [CCActionTween actionWithDuration:0.13 key:@"scaleX" from:0.2 to:0.19];
-    id action2 = [CCActionTween actionWithDuration:0.9 key:@"scaleY" from:0.2 to:0.19];
+    id action2 = [CCActionTween actionWithDuration:0.9 key:@"scaleY" from:0.2 to:0.18
+                  ];
     
     //first sequence loop changes width of the bubble.
     CCSequence *pulseSequence = [CCSequence actions:action,[action reverse], nil];

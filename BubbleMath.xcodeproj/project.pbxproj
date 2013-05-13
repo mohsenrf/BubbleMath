@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE9FD2C11740BF3100F09CC2 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = EE9FD2C01740BF3100F09CC2 /* bubble.png */; };
 		EE9FD2C41740C93F00F09CC2 /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9FD2C31740C93E00F09CC2 /* Bubble.m */; };
+		EE9FD2CA1741226300F09CC2 /* BubbleGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9FD2C91741226300F09CC2 /* BubbleGenerator.m */; };
 		EEEDD055173E9C06000F8B2A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEDD054173E9C06000F8B2A /* QuartzCore.framework */; };
 		EEEDD057173E9C06000F8B2A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEDD056173E9C06000F8B2A /* OpenGLES.framework */; };
 		EEEDD059173E9C06000F8B2A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEDD058173E9C06000F8B2A /* OpenAL.framework */; };
@@ -143,6 +144,8 @@
 		EE9FD2C01740BF3100F09CC2 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
 		EE9FD2C21740C93E00F09CC2 /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bubble.h; path = ../Bubble.h; sourceTree = "<group>"; };
 		EE9FD2C31740C93E00F09CC2 /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bubble.m; path = ../Bubble.m; sourceTree = "<group>"; };
+		EE9FD2C81741226300F09CC2 /* BubbleGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleGenerator.h; sourceTree = "<group>"; };
+		EE9FD2C91741226300F09CC2 /* BubbleGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleGenerator.m; sourceTree = "<group>"; };
 		EEEDD051173E9C06000F8B2A /* BubbleMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEDD054173E9C06000F8B2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EEEDD056173E9C06000F8B2A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -858,6 +861,8 @@
 			children = (
 				EE9FD2C21740C93E00F09CC2 /* Bubble.h */,
 				EE9FD2C31740C93E00F09CC2 /* Bubble.m */,
+				EE9FD2C81741226300F09CC2 /* BubbleGenerator.h */,
+				EE9FD2C91741226300F09CC2 /* BubbleGenerator.m */,
 				EEEDD1ED173E9DEE000F8B2A /* Challenge.h */,
 				EEEDD1EE173E9DEE000F8B2A /* Challenge.m */,
 			);
@@ -1045,6 +1050,7 @@
 				EEEDD1E6173E9C09000F8B2A /* IntroLayer.m in Sources */,
 				EEEDD1EF173E9DEE000F8B2A /* Challenge.m in Sources */,
 				EE9FD2C41740C93F00F09CC2 /* Bubble.m in Sources */,
+				EE9FD2CA1741226300F09CC2 /* BubbleGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@
 
 #import "Challenge.h"
 #import "Bubble.h"
+#import "BubbleGenerator.h"
 
 #pragma mark - HelloWorldLayer
 
@@ -45,16 +46,31 @@
 	if( (self=[super init]) ) {
 		
 		// ask director for the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
+		
         
-        Bubble *bubble=[[Bubble alloc] initWithBubble];
+        CGSize size = [[CCDirector sharedDirector] winSize];
+        //-------------
+        //Bubble *bubble=[[Bubble alloc] initWithBubble];
         
-        
-        
-        [self addChild:[bubble bubbleSprite]];
-        
+        //[self addChild:[bubble bubbleSprite]];
+        //---------
         //[bubble liftBubble];
         //[bubble wobble];
+        //---------
+        BubbleGenerator *bubbleGenerator=[[BubbleGenerator alloc] init];
+        NSMutableArray *labels=[[NSMutableArray alloc] initWithObjects:@"label",@"bye",nil];
+        
+        
+        
+        NSMutableArray *myArray=[bubbleGenerator generateBubbles:1 WithLabels:labels];
+        
+        for (Bubble *bubble in myArray)
+        {
+            [self addChild:[bubble bubbleSprite]];
+        }
+        //[self addChild:[(Bubble *)[myArray objectAtIndex:0] bubbleSprite]];
+        
+        //---------
         
         Challenge *gameChallenger = [[Challenge alloc] init];
         NSString *myString = [gameChallenger getChallengeWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];

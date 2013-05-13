@@ -17,6 +17,7 @@
 
 
 - (id)initWithBubble;
+- (id)initWithBubbleWithPosition: (CGPoint) spawnPoint WithText: (NSString *) bubbleLabel;
 -(CCSprite *) makeBubble;
 - (void) liftBubble;
 - (void) wobble;

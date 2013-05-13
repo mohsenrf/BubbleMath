@@ -22,8 +22,8 @@
         _bubbleSprite=[CCSprite spriteWithFile:@"bubble.png"];
         [_bubbleSprite setScaleX:0.2f];
         [_bubbleSprite setScaleY:0.2f];
-        [_bubbleSprite setPosition:ccp( defaultPoint.x , defaultPoint.y )];
-        
+        //[_bubbleSprite setPosition:ccp( defaultPoint.x , defaultPoint.y )];
+        [_bubbleSprite setPosition:ccp( 150 , 140 )];
         
         //Make a CCLabelTFF
         CCLabelTTF *possibleAnswer = [CCLabelTTF labelWithString:@"Hey!" fontName:@"Arial" fontSize:42];
@@ -39,6 +39,33 @@
     }
     return self;
 }
+
+- (id)initWithBubbleWithPosition: (CGPoint) spawnPoint WithText: (NSString *) bubbleLabel {
+    self = [super init];
+    if (self) {
+        
+        _bubbleSprite=[CCSprite spriteWithFile:@"bubble.png"];
+        [_bubbleSprite setScaleX:0.2f];
+        [_bubbleSprite setScaleY:0.2f];
+        [_bubbleSprite setPosition:ccp( spawnPoint.x, spawnPoint.y )];
+        
+        //Make a CCLabelTFF
+        CCLabelTTF *possibleAnswer = [CCLabelTTF labelWithString:bubbleLabel fontName:@"Arial" fontSize:42];
+        
+        //Centre text on the bubble
+        CGSize bubbleSpriteSize = _bubbleSprite.contentSize;
+        [possibleAnswer setPosition:ccp(bubbleSpriteSize.width / 2, bubbleSpriteSize.height / 2)];
+        
+        //wobble the bubble
+        [self wobble];
+        //add it to the sprite
+        [_bubbleSprite addChild: possibleAnswer];
+    }
+    return self;
+
+}
+
+
 
 - (void) liftBubble
 {

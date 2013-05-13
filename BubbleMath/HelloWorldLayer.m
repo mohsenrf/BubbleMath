@@ -46,7 +46,7 @@
 		
         
         Challenge *gameChallenger = [[Challenge alloc] init];
-        NSString *myString = [gameChallenger getChallenge:ChallengeLevelEasy withFunction:1];
+        NSString *myString = [gameChallenger getChallenge:ChallengeLevelEasy withFunction:Addition];
         
         // create and initialize a Label
 		CCLabelTTF *label = [CCLabelTTF labelWithString:myString fontName:@"Marker Felt" fontSize:64];

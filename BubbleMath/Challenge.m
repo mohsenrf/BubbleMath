@@ -18,19 +18,41 @@
     
 }
 
-- (NSString *) getQuestionWithLevel: (ChallengeLevel) level withFunction: (int) functionType
+- (NSString *) getQuestionWithLevel: (ChallengeLevel) level withFunction: (FunctionType) functionType
 {
-    
     _firstOperand = [self getRandomNumberForLevel:level];
     _secondOperand = [self getRandomNumberForLevel:level];
-    _question=([NSString stringWithFormat:@"%@ + %@", [NSString stringWithFormat:@"%i", _firstOperand], [NSString stringWithFormat:@"%i", _secondOperand]]);
-    _answer = [NSString stringWithFormat:@"%i", (_firstOperand + _secondOperand)];
+    
+    switch (functionType) {
+        case Addition:
+            
+            _question=([NSString stringWithFormat:@"%@ + %@", [NSString stringWithFormat:@"%i", _firstOperand], [NSString stringWithFormat:@"%i", _secondOperand]]);
+            _answer = [NSString stringWithFormat:@"%i", (_firstOperand + _secondOperand)];
+            
+            break;
+            
+        case Subtraction:
+            break;
+            
+        case Multiplication:
+            break;
+            
+        case Division:
+            break;
+            
+        default:
+            break;
+    }
+    
+    
+    
+    
     
     return _question;
     
 }
 
-- (NSString *) getChallenge: (ChallengeLevel) level withFunction: (int) functionType
+- (NSString *) getChallenge: (ChallengeLevel) level withFunction: (FunctionType) functionType
 {
     NSString *myString= [self getQuestionWithLevel:level withFunction:functionType];
     return myString;

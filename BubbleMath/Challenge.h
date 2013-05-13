@@ -30,9 +30,9 @@ typedef enum {Addition, Multiplication, Division, Subtraction} FunctionType;
 
 -(int) getRandomNumberForLevel:(ChallengeLevel) level;
 
--(NSString *) getQuestionWithLevel:(ChallengeLevel) level withFunction:(int) functionType;
+-(NSString *) getQuestionWithLevel:(ChallengeLevel) level withFunction:(FunctionType) functionType;
 
--(NSString *) getChallenge: (ChallengeLevel) level withFunction: (int) functionType;
+-(NSString *) getChallenge: (ChallengeLevel) level withFunction: (FunctionType) functionType;
 
 
 

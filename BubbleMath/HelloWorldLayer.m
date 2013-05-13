@@ -44,7 +44,9 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
-		
+		//getting touches
+        [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+
 		// ask director for the window size
 		
         
@@ -94,6 +96,38 @@
         
 	}
 	return self;
+}
+
+
+
+- (void)selectSpriteForTouch:(CGPoint)touchLocation {
+    CCSprite * newSprite = nil;
+    for (CCSprite *sprite in [self children]) {
+        if (CGRectContainsPoint(sprite.boundingBox, touchLocation)) {
+            newSprite = sprite;
+            //[newSprite stopAllActions];
+            [newSprite removeFromParentAndCleanup:YES];
+            
+            CCParticleSystemQuad* emmiter;
+            emmiter = [CCParticleSystemQuad particleWithFile:@"BubbleBurst.plist"];
+            [emmiter setTexture:[[CCTextureCache sharedTextureCache] addImage:@"BubbleBurstTexture.png"]];
+            //[emmiter setDuration:1];
+            [emmiter setPosition:touchLocation];
+            [self addChild:emmiter];
+            [emmiter resetSystem];
+            
+            
+            break;
+        }
+       
+    }
+//do sth about it
+}
+
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
+    [self selectSpriteForTouch:touchLocation];
+    return TRUE;
 }
 
 // on "dealloc" you need to release all your retained objects

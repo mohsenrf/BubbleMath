@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EE622B99174153D70003EDE8 /* ParticleGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE622B98174153D70003EDE8 /* ParticleGenerator.m */; };
+		EE622B9C17415D0F0003EDE8 /* BubbleBurstTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = EE622B9A17415D0F0003EDE8 /* BubbleBurstTexture.png */; };
+		EE622B9D17415D0F0003EDE8 /* BubbleBurst.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE622B9B17415D0F0003EDE8 /* BubbleBurst.plist */; };
 		EE9FD2C11740BF3100F09CC2 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = EE9FD2C01740BF3100F09CC2 /* bubble.png */; };
 		EE9FD2C41740C93F00F09CC2 /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9FD2C31740C93E00F09CC2 /* Bubble.m */; };
 		EE9FD2CA1741226300F09CC2 /* BubbleGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9FD2C91741226300F09CC2 /* BubbleGenerator.m */; };
@@ -144,6 +146,8 @@
 /* Begin PBXFileReference section */
 		EE622B97174153D70003EDE8 /* ParticleGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleGenerator.h; sourceTree = "<group>"; };
 		EE622B98174153D70003EDE8 /* ParticleGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleGenerator.m; sourceTree = "<group>"; };
+		EE622B9A17415D0F0003EDE8 /* BubbleBurstTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleBurstTexture.png; sourceTree = "<group>"; };
+		EE622B9B17415D0F0003EDE8 /* BubbleBurst.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleBurst.plist; sourceTree = "<group>"; };
 		EE9FD2C01740BF3100F09CC2 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
 		EE9FD2C21740C93E00F09CC2 /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bubble.h; path = ../Bubble.h; sourceTree = "<group>"; };
 		EE9FD2C31740C93E00F09CC2 /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bubble.m; path = ../Bubble.m; sourceTree = "<group>"; };
@@ -436,6 +440,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE622B9E17415D160003EDE8 /* particles */ = {
+			isa = PBXGroup;
+			children = (
+				EE622B9A17415D0F0003EDE8 /* BubbleBurstTexture.png */,
+				EE622B9B17415D0F0003EDE8 /* BubbleBurst.plist */,
+			);
+			name = particles;
+			sourceTree = "<group>";
+		};
 		EE9FD2BF1740BEF200F09CC2 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +510,7 @@
 		EEEDD067173E9C06000F8B2A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EE622B9E17415D160003EDE8 /* particles */,
 				EE9FD2BF1740BEF200F09CC2 /* images */,
 				EEEDD068173E9C06000F8B2A /* Default.png */,
 				EEEDD1F6173E9FC2000F8B2A /* Default-568h@2x.png */,
@@ -939,6 +953,8 @@
 				EEEDD1BE173E9C09000F8B2A /* ChangeLog in Resources */,
 				EEEDD1F7173E9FC2000F8B2A /* Default-568h@2x.png in Resources */,
 				EE9FD2C11740BF3100F09CC2 /* bubble.png in Resources */,
+				EE622B9C17415D0F0003EDE8 /* BubbleBurstTexture.png in Resources */,
+				EE622B9D17415D0F0003EDE8 /* BubbleBurst.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

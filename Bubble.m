@@ -73,7 +73,7 @@
     
     //Defining action to animate property change.
     id action = [CCActionTween actionWithDuration:0.13 key:@"scaleX" from:0.2 to:0.19];
-    id action2 = [CCActionTween actionWithDuration:0.9 key:@"scaleY" from:0.2 to:0.18
+    id action2 = [CCActionTween actionWithDuration:0.11 key:@"scaleY" from:0.2 to:0.18
                   ];
     
     //first sequence loop changes width of the bubble.

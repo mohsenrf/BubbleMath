@@ -43,26 +43,40 @@
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
 		
-		
+		// ask director for the window size
+		CGSize size = [[CCDirector sharedDirector] winSize];
+        
+        
+        CCSprite *bubble=[CCSprite spriteWithFile:@"bubble.png"];
+        //[bubble setTextureRect:CGRectMake(10,10,100,100)];
+        
+        //[bubble setContentSize:CGSizeMake(5.0f, 5.0f)];
+        [bubble setScaleX:0.2f];
+        [bubble setScaleY:0.2f];
+        bubble.position = ccp( size.width /2 , size.height/2 );
+        
+        [self addChild:bubble];
         
         Challenge *gameChallenger = [[Challenge alloc] init];
         NSString *myString = [gameChallenger getChallengeWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];
         
         // create and initialize a Label
 		CCLabelTTF *label = [CCLabelTTF labelWithString:myString fontName:@"Marker Felt" fontSize:64];
-
-		// ask director for the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
-	
-		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
+        
 		
+        
+		// position the label on the center of the screen
+		// label.position =  ccp( size.width /2 , size.height/2 );
+        
+        //Position the label at the buttom of the screen.
+		label.position =  ccp( size.width /2 , label.fontSize/2 );
+        
 		// add the label as a child to this Layer
 		[self addChild: label];
         
         
-       
-
+        
+        
 	}
 	return self;
 }

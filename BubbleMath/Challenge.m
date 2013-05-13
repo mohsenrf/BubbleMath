@@ -58,7 +58,7 @@
     
 }
 
-- (NSString *) getChallenge: (ChallengeLevel) level withFunction: (FunctionType) functionType
+- (NSString *) getChallengeWithDifficultyLevel: (ChallengeLevel) level withFunction: (FunctionType) functionType
 {
     NSString *myString= [self getQuestionWithLevel:level withFunction:functionType];
     return myString;

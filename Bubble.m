@@ -21,7 +21,7 @@
         _bubbleSprite=[CCSprite spriteWithFile:@"bubble.png"];
         [_bubbleSprite setScaleX:0.2f];
         [_bubbleSprite setScaleY:0.2f];
-        [_bubbleSprite setPosition:ccp( 150 , -30 )];
+        [_bubbleSprite setPosition:ccp( 150 , 130 )];
         
         
         //Make a CCLabelTFF
@@ -40,6 +40,7 @@
 - (void) liftBubble
 {
     CGSize size = [[CCDirector sharedDirector] winSize];
+    [_bubbleSprite setPosition:ccp( 150 , -30 )];
     
     CCAction *moveBubble=[CCMoveTo actionWithDuration:5
                                              position:CGPointMake(_bubbleSprite.position.x , size.height+45)];
@@ -62,6 +63,26 @@
     [_bubbleSprite setPosition:ccp( 10 , -30 )];
     
     return _bubbleSprite;
+}
+
+- (void) wobble
+{
+    
+    //Defining action to animate property change.
+    id action = [CCActionTween actionWithDuration:0.13 key:@"scaleX" from:0.2 to:0.19];
+    id action2 = [CCActionTween actionWithDuration:0.9 key:@"scaleY" from:0.2 to:0.19];
+    
+    //first sequence loop changes width of the bubble.
+    CCSequence *pulseSequence = [CCSequence actions:action,[action reverse], nil];
+    CCRepeatForever *repeat = [CCRepeatForever actionWithAction:pulseSequence];
+    [_bubbleSprite runAction:repeat];
+    
+    
+    //second sequence loop changes height of the bubble.
+    CCSequence *pulseSequence2 = [CCSequence actions:action2,[action2 reverse], nil];
+    CCRepeatForever *repeat2 = [CCRepeatForever actionWithAction:pulseSequence2];
+    [_bubbleSprite runAction:repeat2];
+    
 }
 
 

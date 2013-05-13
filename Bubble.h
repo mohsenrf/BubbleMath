@@ -19,6 +19,7 @@
 - (id)initWithBubble;
 -(CCSprite *) makeBubble;
 - (void) liftBubble;
+- (void) wobble;
 
 
 

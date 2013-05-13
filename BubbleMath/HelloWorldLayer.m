@@ -46,7 +46,7 @@
 		
         
         Challenge *gameChallenger = [[Challenge alloc] init];
-        NSString *myString = [gameChallenger getChallenge:EASY withFunction:1];
+        NSString *myString = [gameChallenger getChallenge:ChallengeLevelEasy withFunction:1];
         
         // create and initialize a Label
 		CCLabelTTF *label = [CCLabelTTF labelWithString:myString fontName:@"Marker Felt" fontSize:64];
@@ -73,8 +73,7 @@
 	// in case you have something to dealloc, do it in this method
 	// in this particular example nothing needs to be released.
 	// cocos2d will automatically release all the children (Label)
-	
-	// don't forget to call "super dealloc"
+    // don't forget to call "super dealloc"
 	[super dealloc];
 }
 

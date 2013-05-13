@@ -8,37 +8,33 @@
 
 #import "Challenge.h"
 
-
 @implementation Challenge
 //@synthesize secondOperand,question,answer;
 
-- (int) getRandomNumberForLevel: (int) level
+- (int) getRandomNumberForLevel: (ChallengeLevel) level
 {
     
     return (0 + arc4random() % (level));
     
 }
 
-- (NSString *) getQuestionWithLevel: (int) level withFunction: (int) functionType
+- (NSString *) getQuestionWithLevel: (ChallengeLevel) level withFunction: (int) functionType
 {
-
     
     _firstOperand = [self getRandomNumberForLevel:level];
     _secondOperand = [self getRandomNumberForLevel:level];
+    _question=([NSString stringWithFormat:@"%@ + %@", [NSString stringWithFormat:@"%i", _firstOperand], [NSString stringWithFormat:@"%i", _secondOperand]]);
+    _answer = [NSString stringWithFormat:@"%i", (_firstOperand + _secondOperand)];
     
-    return ([NSString stringWithFormat:@"%@ + %@", [NSString stringWithFormat:@"%i", _firstOperand], [NSString stringWithFormat:@"%i", _secondOperand]]);
-
+    return _question;
     
 }
 
-- (NSString *) getChallenge: (int) level withFunction: (int) functionType
+- (NSString *) getChallenge: (ChallengeLevel) level withFunction: (int) functionType
 {
     NSString *myString= [self getQuestionWithLevel:level withFunction:functionType];
     return myString;
-
+    
 }
-
-
-
 
 @end

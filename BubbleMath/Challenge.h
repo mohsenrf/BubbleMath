@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef  enum {Hard=1000, Medium=100,Easy=10} Level;
+typedef  enum {ChallengeLevelHard=1000, ChallengeLevelMedium=100,ChallengeLevelEasy=10} ChallengeLevel;
+
 typedef enum {Addition, Multiplication, Division, Subtraction} FunctionType;
+
 #define EASY 10
 #define MEDIUM 100
 #define HARD 1000
@@ -26,11 +28,11 @@ typedef enum {Addition, Multiplication, Division, Subtraction} FunctionType;
 @property int firstOperand, secondOperand;
 
 
--(int) getRandomNumberForLevel:(int) level;
+-(int) getRandomNumberForLevel:(ChallengeLevel) level;
 
--(NSString *) getQuestionWithLevel:(int) level withFunction:(int) functionType;
+-(NSString *) getQuestionWithLevel:(ChallengeLevel) level withFunction:(int) functionType;
 
--(NSString *) getChallenge: (int) level withFunction: (int) functionType;
+-(NSString *) getChallenge: (ChallengeLevel) level withFunction: (int) functionType;
 
 
 

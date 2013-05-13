@@ -37,7 +37,7 @@
     return self;
 }
 
-- (void) moveAround
+- (void) liftBubble
 {
     CGSize size = [[CCDirector sharedDirector] winSize];
     

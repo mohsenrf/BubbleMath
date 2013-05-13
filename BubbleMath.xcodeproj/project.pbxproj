@@ -136,7 +136,6 @@
 		EEEDD1E3173E9C09000F8B2A /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1E2173E9C09000F8B2A /* HelloWorldLayer.m */; };
 		EEEDD1E6173E9C09000F8B2A /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1E5173E9C09000F8B2A /* IntroLayer.m */; };
 		EEEDD1EF173E9DEE000F8B2A /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1EE173E9DEE000F8B2A /* Challenge.m */; };
-		EEEDD1F5173E9F9E000F8B2A /* Wobble.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1F4173E9F9E000F8B2A /* Wobble.m */; };
 		EEEDD1F7173E9FC2000F8B2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEDD1F6173E9FC2000F8B2A /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -408,8 +407,6 @@
 		EEEDD1E5173E9C09000F8B2A /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		EEEDD1ED173E9DEE000F8B2A /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
 		EEEDD1EE173E9DEE000F8B2A /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
-		EEEDD1F3173E9F9E000F8B2A /* Wobble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wobble.h; sourceTree = "<group>"; };
-		EEEDD1F4173E9F9E000F8B2A /* Wobble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wobble.m; sourceTree = "<group>"; };
 		EEEDD1F6173E9FC2000F8B2A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -863,8 +860,6 @@
 				EE9FD2C31740C93E00F09CC2 /* Bubble.m */,
 				EEEDD1ED173E9DEE000F8B2A /* Challenge.h */,
 				EEEDD1EE173E9DEE000F8B2A /* Challenge.m */,
-				EEEDD1F3173E9F9E000F8B2A /* Wobble.h */,
-				EEEDD1F4173E9F9E000F8B2A /* Wobble.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1049,7 +1044,6 @@
 				EEEDD1E3173E9C09000F8B2A /* HelloWorldLayer.m in Sources */,
 				EEEDD1E6173E9C09000F8B2A /* IntroLayer.m in Sources */,
 				EEEDD1EF173E9DEE000F8B2A /* Challenge.m in Sources */,
-				EEEDD1F5173E9F9E000F8B2A /* Wobble.m in Sources */,
 				EE9FD2C41740C93F00F09CC2 /* Bubble.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE622B99174153D70003EDE8 /* ParticleGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE622B98174153D70003EDE8 /* ParticleGenerator.m */; };
 		EE9FD2C11740BF3100F09CC2 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = EE9FD2C01740BF3100F09CC2 /* bubble.png */; };
 		EE9FD2C41740C93F00F09CC2 /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9FD2C31740C93E00F09CC2 /* Bubble.m */; };
 		EE9FD2CA1741226300F09CC2 /* BubbleGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9FD2C91741226300F09CC2 /* BubbleGenerator.m */; };
@@ -141,6 +142,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE622B97174153D70003EDE8 /* ParticleGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleGenerator.h; sourceTree = "<group>"; };
+		EE622B98174153D70003EDE8 /* ParticleGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleGenerator.m; sourceTree = "<group>"; };
 		EE9FD2C01740BF3100F09CC2 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
 		EE9FD2C21740C93E00F09CC2 /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bubble.h; path = ../Bubble.h; sourceTree = "<group>"; };
 		EE9FD2C31740C93E00F09CC2 /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bubble.m; path = ../Bubble.m; sourceTree = "<group>"; };
@@ -865,6 +868,8 @@
 				EE9FD2C91741226300F09CC2 /* BubbleGenerator.m */,
 				EEEDD1ED173E9DEE000F8B2A /* Challenge.h */,
 				EEEDD1EE173E9DEE000F8B2A /* Challenge.m */,
+				EE622B97174153D70003EDE8 /* ParticleGenerator.h */,
+				EE622B98174153D70003EDE8 /* ParticleGenerator.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1051,6 +1056,7 @@
 				EEEDD1EF173E9DEE000F8B2A /* Challenge.m in Sources */,
 				EE9FD2C41740C93F00F09CC2 /* Bubble.m in Sources */,
 				EE9FD2CA1741226300F09CC2 /* BubbleGenerator.m in Sources */,
+				EE622B99174153D70003EDE8 /* ParticleGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

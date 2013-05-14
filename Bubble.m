@@ -80,6 +80,8 @@
     [_bubbleSprite runAction:moveBubble];
     
 }
+
+
 -(CCSprite *) makeBubble
 {
     
@@ -92,7 +94,7 @@
     [_bubbleSprite setScaleY:0.2f];
     
     //CGSize size = [[CCDirector sharedDirector] winSize];
-    [_bubbleSprite setPosition:ccp( 10 , -30 )];
+    //[_bubbleSprite setPosition:ccp( 10 , -30 )];
     
     return _bubbleSprite;
 }

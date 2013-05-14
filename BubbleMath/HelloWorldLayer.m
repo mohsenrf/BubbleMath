@@ -16,6 +16,7 @@
 #import "Challenge.h"
 #import "Bubble.h"
 #import "BubbleGenerator.h"
+#import "SimpleAudioEngine.h"
 
 #pragma mark - HelloWorldLayer
 
@@ -97,6 +98,10 @@
 		[self addChild: label];
         
         
+        
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"sample.mp3"];
+        [[SimpleAudioEngine sharedEngine] playEffect:@"sample.mp3"];
+
         
         
 	}

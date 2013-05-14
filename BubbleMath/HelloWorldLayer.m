@@ -23,6 +23,8 @@
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
+
+
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
 {
@@ -69,6 +71,7 @@
         
         Challenge *gameChallenger = [[Challenge alloc] init];
         NSString *currentChallenge = [gameChallenger getChallengeWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];
+        _finalAnswer = [gameChallenger answer];
         
         // create and initialize a Label
 		CCLabelTTF *label = [CCLabelTTF labelWithString:currentChallenge fontName:@"Marker Felt" fontSize:64];
@@ -124,7 +127,23 @@
             newSprite = sprite;
             //[myObject isKindOfClass:[NSString class]]
             if (![newSprite isKindOfClass:[CCLabelTTF class]] ) {
+                for (CCLabelTTF *anyLabel in [newSprite children]) {
+                    if (anyLabel) {
+                        NSString *selectedAnswer = [anyLabel string];
+                        if (selectedAnswer==_finalAnswer) {
+                            NSLog(@"There is a winner");
+                        }
+                    }
+                }
+                
+                
                 [newSprite removeFromParentAndCleanup:YES];
+                
+                
+                
+                
+                
+                
                 
                 CCParticleSystemQuad* emmiter;
                 emmiter = [CCParticleSystemQuad particleWithFile:@"BubbleBurst.plist"];

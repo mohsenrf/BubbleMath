@@ -16,6 +16,7 @@
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
 }
+@property (strong, nonatomic) NSString *finalAnswer;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;

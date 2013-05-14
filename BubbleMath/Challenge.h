@@ -25,7 +25,7 @@ typedef enum {Addition, Multiplication, Division, Subtraction} FunctionType;
 -(NSString *) getQuestionWithLevel:(ChallengeLevel) level withFunction:(FunctionType) functionType;
 
 -(NSString *) getChallengeWithDifficultyLevel: (ChallengeLevel) level withFunction: (FunctionType) functionType;
-
+- (NSMutableArray *) getASetOfAnswersWithDifficultyLevel: (ChallengeLevel) level withFunction: (FunctionType) functionType;
 
 
 @end

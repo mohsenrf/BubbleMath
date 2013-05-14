@@ -60,31 +60,18 @@
         //[bubble liftBubble];
         //[bubble wobble];
         //---------
-        BubbleGenerator *bubbleGenerator=[[BubbleGenerator alloc] init];
-        NSMutableArray *labels=[[NSMutableArray alloc] initWithObjects:@"REZA",@"Mohsen",@"Sikh", @"Esteem",nil];
         
         
         
-        NSMutableArray *myArray=[bubbleGenerator generateBubbles:4 WithLabels:labels];
-        
-        for (Bubble *bubble in myArray)
-        {
-            [self addChild:[bubble bubbleSprite]];
-        }
-        
-        for (Bubble *bubble in myArray)
-        {
-            [bubble liftBubble];
-        }
         //[self addChild:[(Bubble *)[myArray objectAtIndex:0] bubbleSprite]];
         
         //---------
         
         Challenge *gameChallenger = [[Challenge alloc] init];
-        NSString *myString = [gameChallenger getChallengeWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];
+        NSString *currentChallenge = [gameChallenger getChallengeWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];
         
         // create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:myString fontName:@"Marker Felt" fontSize:64];
+		CCLabelTTF *label = [CCLabelTTF labelWithString:currentChallenge fontName:@"Marker Felt" fontSize:64];
         
 		
         
@@ -99,6 +86,26 @@
         
         
         
+        
+        
+        BubbleGenerator *bubbleGenerator=[[BubbleGenerator alloc] init];
+        
+        
+        NSMutableArray *labels=[gameChallenger getASetOfAnswersWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];
+        
+        
+        
+        NSMutableArray *myArray=[bubbleGenerator generateBubbles:4 WithLabels:labels];
+        
+        for (Bubble *bubble in myArray)
+        {
+            [self addChild:[bubble bubbleSprite]];
+        }
+        
+        for (Bubble *bubble in myArray)
+        {
+            [bubble liftBubble];
+        }
         //[[SimpleAudioEngine sharedEngine] preloadEffect:@"sample.mp3"];
         //[[SimpleAudioEngine sharedEngine] playEffect:@"sample.mp3"];
         

@@ -9,7 +9,6 @@
 #import "Challenge.h"
 
 @implementation Challenge
-//@synthesize secondOperand,question,answer;
 
 - (int) getRandomNumberForLevel: (ChallengeLevel) level
 {
@@ -54,11 +53,50 @@
     
 }
 
+
 - (NSString *) getChallengeWithDifficultyLevel: (ChallengeLevel) level withFunction: (FunctionType) functionType
 {
     NSString *myString= [self getQuestionWithLevel:level withFunction:functionType];
     return myString;
     
+}
+
+- (NSMutableArray *) getASetOfAnswersWithDifficultyLevel: (ChallengeLevel) level withFunction: (FunctionType) functionType
+ {
+     
+     int answerMax;
+     
+     
+     switch (functionType) {
+         case Addition:
+             answerMax = level + level;
+             break;
+         case Subtraction:
+
+              answerMax = level;
+             break;
+         case Multiplication:
+
+              answerMax = level * level;
+             break;
+         case Division:
+              answerMax = level;
+             break;
+             
+         default:
+              answerMax = 0;
+             break;
+     }
+     
+     NSMutableArray *answers=[[NSMutableArray alloc] init];
+    for (int i=0; i<4; i++) {
+        [answers addObject:[NSString stringWithFormat:@"%i", [self getRandomNumberForLevel:answerMax]]];
+    }
+     [answers replaceObjectAtIndex:[self getRandomNumberForLevel:3] withObject:_answer];
+     
+     
+    
+     return answers;
 }
 
 @end

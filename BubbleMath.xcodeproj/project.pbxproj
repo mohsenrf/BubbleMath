@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE4FBA9C1742A28000856D6A /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE4FBA9B1742A28000856D6A /* sample.mp3 */; };
 		EE622B99174153D70003EDE8 /* ParticleGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE622B98174153D70003EDE8 /* ParticleGenerator.m */; };
 		EE622B9C17415D0F0003EDE8 /* BubbleBurstTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = EE622B9A17415D0F0003EDE8 /* BubbleBurstTexture.png */; };
 		EE622B9D17415D0F0003EDE8 /* BubbleBurst.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE622B9B17415D0F0003EDE8 /* BubbleBurst.plist */; };
@@ -145,7 +144,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EE4FBA9B1742A28000856D6A /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
 		EE622B97174153D70003EDE8 /* ParticleGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleGenerator.h; sourceTree = "<group>"; };
 		EE622B98174153D70003EDE8 /* ParticleGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleGenerator.m; sourceTree = "<group>"; };
 		EE622B9A17415D0F0003EDE8 /* BubbleBurstTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleBurstTexture.png; sourceTree = "<group>"; };
@@ -445,7 +443,6 @@
 		EE4FBA9D1742A28900856D6A /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				EE4FBA9B1742A28000856D6A /* sample.mp3 */,
 			);
 			name = audio;
 			sourceTree = "<group>";
@@ -966,7 +963,6 @@
 				EE9FD2C11740BF3100F09CC2 /* bubble.png in Resources */,
 				EE622B9C17415D0F0003EDE8 /* BubbleBurstTexture.png in Resources */,
 				EE622B9D17415D0F0003EDE8 /* BubbleBurst.plist in Resources */,
-				EE4FBA9C1742A28000856D6A /* sample.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

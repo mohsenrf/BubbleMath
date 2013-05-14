@@ -99,8 +99,8 @@
         
         
         
-        [[SimpleAudioEngine sharedEngine] preloadEffect:@"sample.mp3"];
-        [[SimpleAudioEngine sharedEngine] playEffect:@"sample.mp3"];
+        //[[SimpleAudioEngine sharedEngine] preloadEffect:@"sample.mp3"];
+        //[[SimpleAudioEngine sharedEngine] playEffect:@"sample.mp3"];
 
         
         

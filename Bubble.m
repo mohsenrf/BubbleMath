@@ -49,7 +49,7 @@
         [_bubbleSprite setPosition:ccp( spawnPoint.x, spawnPoint.y )];
         
         //Make a CCLabelTFF
-        CCLabelTTF *possibleAnswer = [CCLabelTTF labelWithString:bubbleLabel fontName:@"Arial" fontSize:42];
+        CCLabelTTF *possibleAnswer = [CCLabelTTF labelWithString:bubbleLabel fontName:@"Arial" fontSize:57];
         
         //Centre text on the bubble
         CGSize bubbleSpriteSize = _bubbleSprite.contentSize;
@@ -69,10 +69,13 @@
 - (void) liftBubble
 {
     CGSize size = [[CCDirector sharedDirector] winSize];
-    [_bubbleSprite setPosition:ccp( 150 , -30 )];
     
-    CCAction *moveBubble=[CCMoveTo actionWithDuration:5
+    //[_bubbleSprite setPosition:ccp( 150 , -30 )];
+    
+    CCAction *moveBubble=[CCMoveTo actionWithDuration:7
                                              position:CGPointMake(_bubbleSprite.position.x , size.height+45)];
+    
+    
     
     [_bubbleSprite runAction:moveBubble];
     

@@ -60,15 +60,20 @@
         //[bubble wobble];
         //---------
         BubbleGenerator *bubbleGenerator=[[BubbleGenerator alloc] init];
-        NSMutableArray *labels=[[NSMutableArray alloc] initWithObjects:@"label",@"bye",nil];
+        NSMutableArray *labels=[[NSMutableArray alloc] initWithObjects:@"REZA",@"Mohsen",@"Sikh", @"Esteem",nil];
         
         
         
-        NSMutableArray *myArray=[bubbleGenerator generateBubbles:1 WithLabels:labels];
+        NSMutableArray *myArray=[bubbleGenerator generateBubbles:4 WithLabels:labels];
         
         for (Bubble *bubble in myArray)
         {
             [self addChild:[bubble bubbleSprite]];
+        }
+        
+        for (Bubble *bubble in myArray)
+        {
+            [bubble liftBubble];
         }
         //[self addChild:[(Bubble *)[myArray objectAtIndex:0] bubbleSprite]];
         

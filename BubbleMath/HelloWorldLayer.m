@@ -47,7 +47,7 @@
 	if( (self=[super init]) ) {
 		//getting touches
         [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
-
+        
 		// ask director for the window size
 		
         
@@ -101,7 +101,7 @@
         
         //[[SimpleAudioEngine sharedEngine] preloadEffect:@"sample.mp3"];
         //[[SimpleAudioEngine sharedEngine] playEffect:@"sample.mp3"];
-
+        
         
         
 	}
@@ -115,23 +115,27 @@
     for (CCSprite *sprite in [self children]) {
         if (CGRectContainsPoint(sprite.boundingBox, touchLocation)) {
             newSprite = sprite;
-            //[newSprite stopAllActions];
-            [newSprite removeFromParentAndCleanup:YES];
+            //[myObject isKindOfClass:[NSString class]]
+            if (![newSprite isKindOfClass:[CCLabelTTF class]] ) {
+                [newSprite removeFromParentAndCleanup:YES];
+                
+                CCParticleSystemQuad* emmiter;
+                emmiter = [CCParticleSystemQuad particleWithFile:@"BubbleBurst.plist"];
+                [emmiter setTexture:[[CCTextureCache sharedTextureCache] addImage:@"BubbleBurstTexture.png"]];
+                //[emmiter setDuration:1];
+                [emmiter setPosition:touchLocation];
+                [self addChild:emmiter];
+                [emmiter resetSystem];
+                
+                
+                break;
+                
+            }
             
-            CCParticleSystemQuad* emmiter;
-            emmiter = [CCParticleSystemQuad particleWithFile:@"BubbleBurst.plist"];
-            [emmiter setTexture:[[CCTextureCache sharedTextureCache] addImage:@"BubbleBurstTexture.png"]];
-            //[emmiter setDuration:1];
-            [emmiter setPosition:touchLocation];
-            [self addChild:emmiter];
-            [emmiter resetSystem];
-            
-            
-            break;
         }
-       
+        
     }
-//do sth about it
+    //do sth about it
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {

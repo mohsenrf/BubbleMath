@@ -1145,11 +1145,13 @@
 				GCC_PREFIX_HEADER = BubbleMath/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"BubbleMath/libs/kazmath/include\"";
 				INFOPLIST_FILE = BubbleMath/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1163,11 +1165,13 @@
 				GCC_PREFIX_HEADER = BubbleMath/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"BubbleMath/libs/kazmath/include\"";
 				INFOPLIST_FILE = BubbleMath/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

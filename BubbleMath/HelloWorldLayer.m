@@ -122,9 +122,11 @@
 
 
 - (void)selectSpriteForTouch:(CGPoint)touchLocation {
+    BOOL challengeHasEnded=NO;
     CCSprite * newSprite = nil;
     for (CCSprite *sprite in [self children]) {
         if (CGRectContainsPoint(sprite.boundingBox, touchLocation)) {
+            challengeHasEnded=YES;
             newSprite = sprite;
             //[myObject isKindOfClass:[NSString class]]
             if (![newSprite isKindOfClass:[CCLabelTTF class]] ) {
@@ -133,22 +135,18 @@
                         NSString *selectedAnswer = [anyLabel string];
                         if (selectedAnswer==_finalAnswer) {
                             [[SimpleAudioEngine sharedEngine] playEffect:@"win.wav"];
+                            
                         }else
                         {
                             [[SimpleAudioEngine sharedEngine] playEffect:@"lose.mp3"];
 
                         }
+                        
                     }
                 }
                 
                 
                 [newSprite removeFromParentAndCleanup:YES];
-                
-                
-                
-                
-                
-                
                 
                 CCParticleSystemQuad* emmiter;
                 emmiter = [CCParticleSystemQuad particleWithFile:@"BubbleBurst.plist"];
@@ -157,8 +155,7 @@
                 [emmiter setPosition:touchLocation];
                 [self addChild:emmiter];
                 [emmiter resetSystem];
-                
-                
+ 
                 break;
                 
             }
@@ -166,7 +163,7 @@
         }
         
     }
-    //do sth about it
+
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {

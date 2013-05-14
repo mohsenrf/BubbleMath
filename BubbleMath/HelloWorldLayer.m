@@ -109,8 +109,9 @@
         {
             [bubble liftBubble];
         }
-        //[[SimpleAudioEngine sharedEngine] preloadEffect:@"sample.mp3"];
-        //[[SimpleAudioEngine sharedEngine] playEffect:@"sample.mp3"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"win.wav"];
+        [[SimpleAudioEngine sharedEngine] preloadEffect:@"lose.mp3"];
+
         
         
         
@@ -131,7 +132,11 @@
                     if (anyLabel) {
                         NSString *selectedAnswer = [anyLabel string];
                         if (selectedAnswer==_finalAnswer) {
-                            NSLog(@"There is a winner");
+                            [[SimpleAudioEngine sharedEngine] playEffect:@"win.wav"];
+                        }else
+                        {
+                            [[SimpleAudioEngine sharedEngine] playEffect:@"lose.mp3"];
+
                         }
                     }
                 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE4FBAA01742B11F00856D6A /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = EE4FBA9E1742B11F00856D6A /* win.wav */; };
+		EE4FBAA11742B11F00856D6A /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE4FBA9F1742B11F00856D6A /* lose.mp3 */; };
 		EE622B99174153D70003EDE8 /* ParticleGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EE622B98174153D70003EDE8 /* ParticleGenerator.m */; };
 		EE622B9C17415D0F0003EDE8 /* BubbleBurstTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = EE622B9A17415D0F0003EDE8 /* BubbleBurstTexture.png */; };
 		EE622B9D17415D0F0003EDE8 /* BubbleBurst.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE622B9B17415D0F0003EDE8 /* BubbleBurst.plist */; };
@@ -144,6 +146,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE4FBA9E1742B11F00856D6A /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		EE4FBA9F1742B11F00856D6A /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
 		EE622B97174153D70003EDE8 /* ParticleGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleGenerator.h; sourceTree = "<group>"; };
 		EE622B98174153D70003EDE8 /* ParticleGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticleGenerator.m; sourceTree = "<group>"; };
 		EE622B9A17415D0F0003EDE8 /* BubbleBurstTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BubbleBurstTexture.png; sourceTree = "<group>"; };
@@ -443,6 +447,8 @@
 		EE4FBA9D1742A28900856D6A /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				EE4FBA9E1742B11F00856D6A /* win.wav */,
+				EE4FBA9F1742B11F00856D6A /* lose.mp3 */,
 			);
 			name = audio;
 			sourceTree = "<group>";
@@ -963,6 +969,8 @@
 				EE9FD2C11740BF3100F09CC2 /* bubble.png in Resources */,
 				EE622B9C17415D0F0003EDE8 /* BubbleBurstTexture.png in Resources */,
 				EE622B9D17415D0F0003EDE8 /* BubbleBurst.plist in Resources */,
+				EE4FBAA01742B11F00856D6A /* win.wav in Resources */,
+				EE4FBAA11742B11F00856D6A /* lose.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

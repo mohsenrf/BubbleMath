@@ -10,7 +10,7 @@
 
 typedef  enum {ChallengeLevelHard=1000, ChallengeLevelMedium=100,ChallengeLevelEasy=10} ChallengeLevel;
 
-typedef enum {Addition, Multiplication, Division, Subtraction} FunctionType;
+typedef enum {Addition, Multiplication, Subtraction} FunctionType;
 
 
 @interface Challenge : NSObject

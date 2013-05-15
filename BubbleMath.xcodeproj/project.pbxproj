@@ -85,7 +85,7 @@
 		EEEDD11F173E9C08000F8B2A /* CCSpriteBatchNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD11E173E9C08000F8B2A /* CCSpriteBatchNode.m */; };
 		EEEDD122173E9C08000F8B2A /* CCSpriteFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD121173E9C08000F8B2A /* CCSpriteFrame.m */; };
 		EEEDD125173E9C08000F8B2A /* CCSpriteFrameCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD124173E9C08000F8B2A /* CCSpriteFrameCache.m */; };
-		EEEDD128173E9C08000F8B2A /* CCTexture2D.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD127173E9C08000F8B2A /* CCTexture2D.m */; };
+		EEEDD128173E9C08000F8B2A /* CCTexture2D.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD127173E9C08000F8B2A /* CCTexture2D.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		EEEDD12B173E9C08000F8B2A /* CCTextureAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD12A173E9C08000F8B2A /* CCTextureAtlas.m */; };
 		EEEDD12E173E9C08000F8B2A /* CCTextureCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD12D173E9C08000F8B2A /* CCTextureCache.m */; };
 		EEEDD131173E9C08000F8B2A /* CCTexturePVR.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD130173E9C08000F8B2A /* CCTexturePVR.m */; };
@@ -119,7 +119,7 @@
 		EEEDD18F173E9C09000F8B2A /* TGAlib.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD18E173E9C09000F8B2A /* TGAlib.m */; };
 		EEEDD192173E9C09000F8B2A /* TransformUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD191173E9C09000F8B2A /* TransformUtils.m */; };
 		EEEDD197173E9C09000F8B2A /* ZipUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD196173E9C09000F8B2A /* ZipUtils.m */; };
-		EEEDD19C173E9C09000F8B2A /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD19B173E9C09000F8B2A /* CDAudioManager.m */; };
+		EEEDD19C173E9C09000F8B2A /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD19B173E9C09000F8B2A /* CDAudioManager.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		EEEDD1A0173E9C09000F8B2A /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD19F173E9C09000F8B2A /* CDOpenALSupport.m */; };
 		EEEDD1A3173E9C09000F8B2A /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1A2173E9C09000F8B2A /* CocosDenshion.m */; };
 		EEEDD1A6173E9C09000F8B2A /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDD1A5173E9C09000F8B2A /* SimpleAudioEngine.m */; };

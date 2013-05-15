@@ -508,8 +508,6 @@
 			children = (
 				EEEDD1DE173E9C09000F8B2A /* AppDelegate.h */,
 				EEEDD1DF173E9C09000F8B2A /* AppDelegate.m */,
-				EEEDD1E1173E9C09000F8B2A /* HelloWorldLayer.h */,
-				EEEDD1E2173E9C09000F8B2A /* HelloWorldLayer.m */,
 				EEEDD1E4173E9C09000F8B2A /* IntroLayer.h */,
 				EEEDD1E5173E9C09000F8B2A /* IntroLayer.m */,
 				EEEDD1EC173E9D96000F8B2A /* Model */,
@@ -890,6 +888,8 @@
 		EEEDD1EC173E9D96000F8B2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EEEDD1E1173E9C09000F8B2A /* HelloWorldLayer.h */,
+				EEEDD1E2173E9C09000F8B2A /* HelloWorldLayer.m */,
 				EE9FD2C21740C93E00F09CC2 /* Bubble.h */,
 				EE9FD2C31740C93E00F09CC2 /* Bubble.m */,
 				EE9FD2C81741226300F09CC2 /* BubbleGenerator.h */,

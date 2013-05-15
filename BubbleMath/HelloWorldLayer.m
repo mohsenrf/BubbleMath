@@ -43,8 +43,6 @@
 - (void)StartGame
 {
     // ask director for the window size
-    
-    
     CGSize size = [[CCDirector sharedDirector] winSize];
     
     Challenge *gameChallenger = [[Challenge alloc] init];
@@ -54,25 +52,14 @@
     // create and initialize a Label
     CCLabelTTF *label = [CCLabelTTF labelWithString:currentChallenge fontName:@"Marker Felt" fontSize:64];
     
-    
-    
-    
     //Position the label at the buttom of the screen.
     label.position =  ccp( size.width /2 , label.fontSize/2 );
     
     // add the label as a child to this Layer
     [self addChild: label];
-    
-    
-    
-    
-    
     BubbleGenerator *bubbleGenerator=[[BubbleGenerator alloc] init];
-    
-    
+
     NSMutableArray *labels=[gameChallenger getASetOfAnswersWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];
-    
-    
     
     NSMutableArray *myArray=[bubbleGenerator generateBubbles:4 WithLabels:labels];
     

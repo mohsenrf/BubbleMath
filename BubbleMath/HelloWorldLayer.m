@@ -12,7 +12,6 @@
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
-
 #import "Challenge.h"
 #import "Bubble.h"
 #import "BubbleGenerator.h"
@@ -41,6 +40,55 @@
 	return scene;
 }
 
+- (void)StartGame
+{
+    // ask director for the window size
+    
+    
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    
+    Challenge *gameChallenger = [[Challenge alloc] init];
+    NSString *currentChallenge = [gameChallenger getChallengeWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];
+    _finalAnswer = [gameChallenger answer];
+    
+    // create and initialize a Label
+    CCLabelTTF *label = [CCLabelTTF labelWithString:currentChallenge fontName:@"Marker Felt" fontSize:64];
+    
+    
+    
+    
+    //Position the label at the buttom of the screen.
+    label.position =  ccp( size.width /2 , label.fontSize/2 );
+    
+    // add the label as a child to this Layer
+    [self addChild: label];
+    
+    
+    
+    
+    
+    BubbleGenerator *bubbleGenerator=[[BubbleGenerator alloc] init];
+    
+    
+    NSMutableArray *labels=[gameChallenger getASetOfAnswersWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];
+    
+    
+    
+    NSMutableArray *myArray=[bubbleGenerator generateBubbles:4 WithLabels:labels];
+    
+    for (Bubble *bubble in myArray)
+    {
+        [self addChild:[bubble bubbleSprite]];
+    }
+    
+    for (Bubble *bubble in myArray)
+    {
+        [bubble liftBubble];
+    }
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"win.wav"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"lose.mp3"];
+}
+
 // on "init" you need to initialize your instance
 -(id) init
 {
@@ -48,72 +96,13 @@
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
 		//getting touches
+        [[CCDirector sharedDirector] setDisplayFPS:NO];
+        
         [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
         
-		// ask director for the window size
-		
-        
-        CGSize size = [[CCDirector sharedDirector] winSize];
-        //-------------
-        //Bubble *bubble=[[Bubble alloc] initWithBubble];
-        
-        //[self addChild:[bubble bubbleSprite]];
-        //---------
-        //[bubble liftBubble];
-        //[bubble wobble];
-        //---------
-        
-        
-        
-        //[self addChild:[(Bubble *)[myArray objectAtIndex:0] bubbleSprite]];
-        
-        //---------
-        
-        Challenge *gameChallenger = [[Challenge alloc] init];
-        NSString *currentChallenge = [gameChallenger getChallengeWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];
-        _finalAnswer = [gameChallenger answer];
-        
-        // create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:currentChallenge fontName:@"Marker Felt" fontSize:64];
-        
-		
-        
-		// position the label on the center of the screen
-		// label.position =  ccp( size.width /2 , size.height/2 );
-        
-        //Position the label at the buttom of the screen.
-		label.position =  ccp( size.width /2 , label.fontSize/2 );
-        
-		// add the label as a child to this Layer
-		[self addChild: label];
-        
-        
-        
-        
-        
-        BubbleGenerator *bubbleGenerator=[[BubbleGenerator alloc] init];
-        
-        
-        NSMutableArray *labels=[gameChallenger getASetOfAnswersWithDifficultyLevel:ChallengeLevelEasy withFunction:Addition];
-        
-        
-        
-        NSMutableArray *myArray=[bubbleGenerator generateBubbles:4 WithLabels:labels];
-        
-        for (Bubble *bubble in myArray)
-        {
-            [self addChild:[bubble bubbleSprite]];
-        }
-        
-        for (Bubble *bubble in myArray)
-        {
-            [bubble liftBubble];
-        }
-        [[SimpleAudioEngine sharedEngine] preloadEffect:@"win.wav"];
-        [[SimpleAudioEngine sharedEngine] preloadEffect:@"lose.mp3"];
 
-        
-        
+        [self StartGame];
+
         
 	}
 	return self;
@@ -121,10 +110,13 @@
 
 
 
+
 - (void)selectSpriteForTouch:(CGPoint)touchLocation {
     BOOL challengeHasEnded=NO;
+    //int j=0;
     CCSprite * newSprite = nil;
     for (CCSprite *sprite in [self children]) {
+        //j++;
         if (CGRectContainsPoint(sprite.boundingBox, touchLocation)) {
             challengeHasEnded=YES;
             newSprite = sprite;
@@ -155,7 +147,6 @@
                 [emmiter setPosition:touchLocation];
                 [self addChild:emmiter];
                 [emmiter resetSystem];
- 
                 break;
                 
             }
@@ -163,7 +154,20 @@
         }
         
     }
+    
+    if (challengeHasEnded) {
+        
+        
+        for (CCSprite *sprite in [self children]) {
+            [sprite stopAllActions];
+            //[sprite removeFromParentAndCleanup:YES];
+            
+            
+        }
 
+        
+    }
+    
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
